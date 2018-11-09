@@ -1,6 +1,8 @@
 var TelegramBot = require('node-telegram-bot-api');
 const fetch = require("node-fetch");
 
+const port = process.env.PORT || 3000;
+
 // Устанавливаем токен, который выдавал нам бот.
 var token = '773065086:AAFHP5-a91QeX0uWHPcJfBMIHtCle5AxIko';
 // Включить опрос сервера
