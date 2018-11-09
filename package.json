@@ -4,7 +4,7 @@
   "description": "Fetch raitings from imdb API",
   "main": "index.js",
   "scripts": {
-    "start": "supervisor index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
