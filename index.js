@@ -119,6 +119,7 @@ function fetchPlayerInfo(mess, clientId)
 
 // Написать мне ... (/echo Hello World! - пришлет сообщение с этим приветствием.)
 bot.onText(new RegExp('\/start'), function (message, match) {
+cosole.log("start");
     // вытаскиваем id клиента из пришедшего сообщения
     var clientId = message.hasOwnProperty('chat') ? message.chat.id : message.from.id;
     
