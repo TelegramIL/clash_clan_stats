@@ -142,5 +142,6 @@ bot.onText(new RegExp(''), function (message, match) {
 
     var clientId = message.hasOwnProperty('chat') ? message.chat.id : message.from.id;
     // посылаем ответное сообщение
+    
     bot.sendMessage(clientId,'Редкость', messageOptions2);
 });
