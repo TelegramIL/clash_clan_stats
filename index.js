@@ -8,7 +8,7 @@ var bot = new TelegramBot(token, {polling: true});
 
 var clan_tag = '#PL8GLLC';
 
-var messageOptions = {
+var messageOptions2 = {
     parse_mode: "HTML",
     disable_web_page_preview: false,
     reply_markup: JSON.stringify({
@@ -21,9 +21,46 @@ var messageOptions = {
             callback_data: 'find_card'
         },
     ]],
-    keyboard: [[{
+    keyboard: [
+        [{
+        text: 'Обычные',
+        callback_data: 'common_cards'
+        },
+        {
+        text: 'Редкие',
+        callback_data: 'rare_cards'
+        }
+        ], 
+        [{
+        text: 'Эпичиские',
+        callback_data: 'epic_cards'
+        },
+        {
+        text: 'Легендарные',
+        callback_data: 'legend_cards'
+        }
+        ], 
+        [{
+        text: 'Назад',
+        callback_data: 'back'
+        },
+        {
+        text: 'Домой',
+        callback_data: 'home'
+        }
+        ], 
+]
+    }), 
+}
+
+var messageOptions = {
+    parse_mode: "HTML",
+    disable_web_page_preview: false,
+    reply_markup: JSON.stringify({
+        keyboard: [[{
         text: 'Израиль Рулит',
-        callback_data: 'fetch_users'
+        callback_data: 'fetch_users',
+        id: 0
     }]]
     }), 
 }
@@ -102,41 +139,7 @@ bot.on('callback_query', function (message) {
 });
 
 bot.onText(new RegExp(''), function (message, match) {
-    var messageOptions2 = {
-        parse_mode: "HTML",
-        disable_web_page_preview: false,
-        reply_markup: JSON.stringify({
-            inline_keyboard: [[{
-                text: 'Израиль Рулит',
-                callback_data: 'fetch_users'
-            },
-            {
-                text: 'Найти карту',
-                callback_data: 'find_card'
-            },
-        ]],
-        keyboard: [
-            [{
-            text: 'Обычные',
-            callback_data: 'common_cards'
-            },
-            {
-            text: 'Редкие',
-            callback_data: 'rare_cards'
-            }
-            ], 
-            [{
-            text: 'Эпичиские',
-            callback_data: 'common_cards'
-            },
-            {
-            text: 'Легендарные',
-            callback_data: 'rare_cards'
-            }
-            ], 
-]
-        }), 
-    }
+
     var clientId = message.hasOwnProperty('chat') ? message.chat.id : message.from.id;
     // посылаем ответное сообщение
     bot.sendMessage(clientId,'Редкость', messageOptions2);
