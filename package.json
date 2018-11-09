@@ -1,0 +1,27 @@
+{
+  "name": "imdbbot",
+  "version": "1.0.0",
+  "description": "Fetch raitings from imdb API",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TelegramIL/imdbbot.git"
+  },
+  "keywords": [
+    "telegrambot"
+  ],
+  "author": "Shorox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TelegramIL/imdbbot/issues"
+  },
+  "homepage": "https://github.com/TelegramIL/imdbbot#readme",
+  "dependencies": {
+    "node-fetch": "^2.2.1",
+    "node-telegram-bot-api": "^0.30.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
