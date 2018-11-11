@@ -21,14 +21,16 @@ module.exports = {
 
 
   const getMemberList = async () =>
-  {
+  { console.log("getMemberList START")
     var response = await fetch('https://api.clashroyale.com/v1/clans/%23PL8GLLC', {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'authorization': 'Bearer ' + clash_token,
         },
-      })
+      }).catch(function(error) {
+        console.log(error);
+    });
       var myJson = await response.json();
         var clanDescription = myJson.description;
         var members = myJson.memberList.map(member => ([{text: member.name + ':   '  + member.trophies + ' 👑 ' + '                     ' , callback_data: member.tag}]));
