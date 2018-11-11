@@ -33,6 +33,7 @@ const fetchPlayerInfo = async (mess, clientId) =>
         console.log(error);
     });
     var myJson = await response.json();
+    console.log(myJson);
         myJson.items.map(item => 
         {
             bot.sendMessage(clientId, item.index + ' ' + item.name);
