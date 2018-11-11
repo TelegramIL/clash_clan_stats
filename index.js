@@ -14,13 +14,13 @@ var token = '773065086:AAFHP5-a91QeX0uWHPcJfBMIHtCle5AxIko';
 // Включить опрос сервера
 var bot = new TelegramBot(token, {polling: true});
 
-var clash_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImM1MWExNjZmLTI4ZmQtNDVhZC1iYjUyLWZmNGQ4NDI4NDc5YSIsImlhdCI6MTU0MTg3NTgxOCwic3ViIjoiZGV2ZWxvcGVyLzJmMmRhZTA3LTMxN2EtNmY0Ny01MzEwLWZlYzE4NDBhNTViMCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyI3Ny4xMjQuMTIzLjE2NiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.BFV06SKfHgnLNarsuwP12TrHTPGjkjC3yxp614jEZhVCPpEzmzaeaecyR9QlnL-PbYyEoxqfr7MpDxHu1gP4LQ';
-
+var clash_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjMzNTExY2UyLTEwZmEtNDNmZS1hMjI4LTNlNTAxYzYzOTM4ZCIsImlhdCI6MTU0MTk3MDQ3OCwic3ViIjoiZGV2ZWxvcGVyLzJmMmRhZTA3LTMxN2EtNmY0Ny01MzEwLWZlYzE4NDBhNTViMCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIwLjAuMC4wIl0sInR5cGUiOiJjbGllbnQifV19.ih0gRp7jNwkXle05RQ8xuCpQd0Ag4dIiWHpIqyTIcgSHh-_ov097MdsijDPoY60Bn2o9HYfbWRBoFWGMMttCKQ';
 var clan_tag = '#PL8GLLC';
 
 
 const fetchPlayerInfo = async (mess, clientId) =>
 {
+    console.log("fetchPlayerInfo");
     var newUrl = mess.replace('#', '%23');
     var url = 'https://api.clashroyale.com/v1/players/' + newUrl + '/upcomingchests';
     var response = await fetch(url, {
