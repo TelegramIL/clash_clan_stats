@@ -1,13 +1,10 @@
 var TelegramBot = require('node-telegram-bot-api');
 const fetch = require("node-fetch");
 
-<<<<<<< HEAD
 const menuHandler = require('./menu_handler');
 const cardHandler = require('./cardsHandler');
 const memberHandler = require('./handle_clan_memebrs');
-=======
 const port = process.env.PORT || 3000;
->>>>>>> 420fb5cc69f8020a3e1de1a8ae7b9a3f0d5517f1
 
 // Устанавливаем токен, который выдавал нам бот.
 var token = '773065086:AAFHP5-a91QeX0uWHPcJfBMIHtCle5AxIko';
@@ -42,14 +39,11 @@ const fetchPlayerInfo = async (mess, clientId) =>
 bot.onText(new RegExp('\/start'), async (message, match) =>
 {
 
-<<<<<<< HEAD
     var mOptions = await menuHandler.handleMenuState(message.text);
-=======
 // Написать мне ... (/echo Hello World! - пришлет сообщение с этим приветствием.)
 bot.onText(new RegExp('\/start'), function (message, match) {
 cosole.log("start");
     // вытаскиваем id клиента из пришедшего сообщения
->>>>>>> 420fb5cc69f8020a3e1de1a8ae7b9a3f0d5517f1
     var clientId = message.hasOwnProperty('chat') ? message.chat.id : message.from.id;
     bot.sendMessage(clientId, mOptions.text, mOptions.menu);
 });
