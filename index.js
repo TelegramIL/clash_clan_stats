@@ -40,9 +40,6 @@ bot.onText(new RegExp('\/start'), async (message, match) =>
 {
 
     var mOptions = await menuHandler.handleMenuState(message.text);
-// Написать мне ... (/echo Hello World! - пришлет сообщение с этим приветствием.)
-bot.onText(new RegExp('\/start'), function (message, match) {
-cosole.log("start");
     // вытаскиваем id клиента из пришедшего сообщения
     var clientId = message.hasOwnProperty('chat') ? message.chat.id : message.from.id;
     bot.sendMessage(clientId, mOptions.text, mOptions.menu);
@@ -101,14 +98,16 @@ bot.onText(new RegExp('^(?!/)'),  async (message, match) => {
     {
         mOptions = await menuHandler.handleMenuState(message.text);
     }
+    
     if (mOptions && mOptions.text)
     {
         bot.sendMessage(clientId,  mOptions.text, mOptions.menu);
     }
 });
 
+
 const waitForMember = async () =>
 {
     var result = await memberHandler.getMembers();
-    return result
+    return result;
 }
