@@ -29,7 +29,7 @@ const fetchPlayerInfo = async (mess, clientId) =>
           'Accept': 'application/json',
           'authorization': 'Bearer ' + clash_token,
          },
-      }) .catch(function() {
+      }).catch(function() {
         console.log("error");
     });
     var myJson = await response.json();
