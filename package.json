@@ -6,9 +6,6 @@
   "scripts": {
     "start": "node index.js"
   },
-  "engines": {
-    "node": "8.11.4"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TelegramIL/clash_clan_stats.git"
