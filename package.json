@@ -1,14 +1,14 @@
 {
-  "name": "imdbbot",
+  "name": "clash_clan_stats",
   "version": "1.0.0",
-  "description": "Fetch raitings from imdb API",
+  "description": "Clash Royale Clan Stats",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TelegramIL/imdbbot.git"
+    "url": "git+https://github.com/TelegramIL/clash_clan_stats.git"
   },
   "keywords": [
     "telegrambot"
@@ -16,9 +16,9 @@
   "author": "Shorox",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TelegramIL/imdbbot/issues"
+    "url": "https://github.com/TelegramIL/clash_clan_stats/issues"
   },
-  "homepage": "https://github.com/TelegramIL/imdbbot#readme",
+  "homepage": "https://github.com/TelegramIL/clash_clan_stats#readme",
   "dependencies": {
     "node-fetch": "^2.2.1",
     "node-telegram-bot-api": "^0.30.0",
